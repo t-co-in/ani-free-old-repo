@@ -16,6 +16,7 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Map;
+import java.util.Random;
 
 
 public class FirebasePluginMessagingService extends FirebaseMessagingService {
@@ -83,13 +84,19 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(getApplicationInfo().icon)
                 .setContentTitle(title)
                 .setContentText(messageBody)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(messageBody))
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent);
+
+        int resID = getResources().getIdentifier("notification_icon", "drawable", getPackageName());
+        if (resID != 0) {
+            notificationBuilder.setSmallIcon(resID);
+        } else {
+            notificationBuilder.setSmallIcon(getApplicationInfo().icon);
+        }
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
