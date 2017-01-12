@@ -6,7 +6,8 @@
     "storage_bucket": "admob-app-id-3769776524.appspot.com"
   },
   "client": [
-    
+  
+
     {
       "client_info": {
         "mobilesdk_app_id": "1:1080274052897:android:0f99d5137cfcad71",
@@ -16,11 +17,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "1080274052897-c36hqf1l7g0dmovkf74sfd2vijknb0h4.apps.googleusercontent.com",
+          "client_id": "1080274052897-4fh581o4ji5s0v6p8jjn34g2rb7ej9n2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.edutainmentapp.animals.free",
-            "certificate_hash": "E760B2C8A663C0E0D8A079D32437F2FB3840BCA2"
+            "certificate_hash": "3848946E9FA58B9B8950443CAE72797B00AA5E5F"
           }
         },
         {
@@ -39,7 +40,20 @@
         },
         "appinvite_service": {
           "status": 2,
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080274052897-uhr10ao40m29qjd29h1t9oevc9knau47.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1080274052897-ou706iorjs0jtevrr034vgjto5uv1249.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.edutainmentapp.animals.paid",
+                "app_store_id": "1132611266"
+              }
+            }
+          ]
         },
         "ads_service": {
           "status": 2
